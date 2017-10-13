@@ -6,4 +6,9 @@ Dark chocolate (3)
 
 /** create the db and put data into it **/
 
-CREATE TABLE Groceries ();
+/** CREATE TABLE Groceries ();  **/
+/**Notice we  make a PK but it does not auto increment  **/
+CREATE TABLE Groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER);
+
+/** Insert the first row **/
+INSERT INTO Groceries VALuES (1, "Apples", 7);
