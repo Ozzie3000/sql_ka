@@ -14,3 +14,6 @@ CREATE TABLE Groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER);
 INSERT INTO Groceries VALuES (1, "Apples", 7);
 INSERT INTO Groceries VALuES (2, "Bananas", 7);
 INSERT INTO Groceries VALuES (3, "Dark chocolate", 3);
+
+/** Select EVERYTHING from the groceries table **/
+SELECT * FROM Groceries;
