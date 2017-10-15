@@ -12,3 +12,5 @@ CREATE TABLE Groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER);
 
 /** Insert the first row **/
 INSERT INTO Groceries VALuES (1, "Apples", 7);
+INSERT INTO Groceries VALuES (2, "Bananas", 7);
+INSERT INTO Groceries VALuES (3, "Dark chocolate", 3);
