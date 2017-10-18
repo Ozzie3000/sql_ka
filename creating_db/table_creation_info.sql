@@ -17,3 +17,6 @@ INSERT INTO Books Values (3, "Dark chocolate", 3);
 
 /** Select EVERYTHING from the groceries table **/
 SELECT * FROM Groceries;
+
+/** Find id's greater than 1 **/
+SELECT * FROM Groceries WHERE id > 1;
