@@ -11,3 +11,6 @@ INSERT INTO Movies VALUES (6, "The Babadook", 2014);
 
 /** get all rows from Movies DB **/
 SELECT * FROM Movies;
+
+/** get all movies released on 2000 or later.  Sort them by release year **/
+SELECT * FROM movies WHERE release_year > 1999 ORDER BY release_year;
