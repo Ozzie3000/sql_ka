@@ -6,8 +6,8 @@ CREATE TABLE Groceries (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, ais
 /** Insert the first row **/
 INSERT INTO Groceries VALUES (1, "Apples", 7, 7);
 INSERT INTO Groceries VALUES (2, "Bananas", 7, 5);
-INSERT INTO Groceries VALUES (3, "Dark chocolate", 3, 6);
-INSERT INTO Groceries VALUES (3, "Eggplant", 3, 6);
-INSERT INTO Groceries VALUES (3, "Eggs", 3, 6);
-INSERT INTO Groceries VALUES (3, "Figs", 3, 6);
+INSERT INTO Groceries VALUES (3, "Dark chocolate", 3, 1);
+INSERT INTO Groceries VALUES (3, "Eggplant", 1, 2);
+INSERT INTO Groceries VALUES (3, "Eggs", 3, 12);
+INSERT INTO Groceries VALUES (3, "Figs", 3, 2);
 
