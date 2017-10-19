@@ -16,3 +16,7 @@ SELECT name FROM Groceries;
 
 /**Not very organized.  Optimize by grouping by aisle **/
 SELECT * FROM Groceries ORDER BY aisle;
+
+/**Split the store with someone. 12 aisles 2 people is 6 aisles per person **/
+SELECT * FROM Groceries WHERE aisle > 6 ORDER BY aisle;
+SELECT * FROM Groceries WHERE aisle < 7 ORDER BY aisle;
