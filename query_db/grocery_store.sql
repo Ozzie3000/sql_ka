@@ -11,5 +11,8 @@ INSERT INTO Groceries VALUES (4, "Eggplant", 1, 2);
 INSERT INTO Groceries VALUES (5, "Eggs", 12, 12);
 INSERT INTO Groceries VALUES (6, "Figs", 6, 2);
 
-/** Get a list of groceries. names  **/
+/** Get a list of Groceries. names  **/
 SELECT name FROM Groceries;
+
+/**Not very organized.  Optimize by grouping by aisle **/
+SELECT * FROM Groceries ORDER BY aisle;
