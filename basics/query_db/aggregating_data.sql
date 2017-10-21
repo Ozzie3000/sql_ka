@@ -27,3 +27,5 @@ SELECT SUM(quantity) FROM Groceries GROUP BY aisle;
 /**Add aisle to see sum for that aisle **/
 SELECT aisle, SUM(quantity) FROM Groceries GROUP BY aisle;
 /**now we see sum of items per aisle number**/
+/** sql engine: grouping of rows based on aisles, then sum of groups, then aisle value it saw which is ok since they are the same **/
+/** where this can be a problem if you change that select to name.  It only gives you first item even if there are more **/
