@@ -32,6 +32,3 @@ SELECT aisle, SUM(quantity) FROM Groceries GROUP BY aisle;
 /** where this can be a problem if you change that select to name.  It only gives you first item even if there are more **/
 SELECT name, SUM(quantity) FROM Groceries GROUP BY aisle;
 /**may not get sensible result if you use different SELECT than what you group by**/
-
-/**give the result aka column a new name**/
-SELECT SUM(minutes) AS total_min_spent FROM Todo_list; 

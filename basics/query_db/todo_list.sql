@@ -6,3 +6,9 @@ INSERT INTO Todo_list VALUES (3, "Learn some stuff on computer science", 60);
 
 /**pick something fun and insert it into table**/
 INSERT INTO Todo_list VALUES (4, "Look for Droids", 360); 
+
+/**find total time of all activities**/
+SELECT SUM(minutes) FROM Todo_list; 
+
+/**give the result aka column a new name**/
+SELECT SUM(minutes) AS total_min_spent FROM Todo_list; 
