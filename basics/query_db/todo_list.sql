@@ -7,6 +7,9 @@ INSERT INTO Todo_list VALUES (3, "Learn some stuff on computer science", 60);
 /**pick something fun and insert it into table**/
 INSERT INTO Todo_list VALUES (4, "Look for Droids", 360); 
 
+/**car chores**/
+INSERT INTO Todo_list VALUES (5, "Work on car", 240);
+
 /**find total time of all activities**/
 SELECT SUM(minutes) FROM Todo_list; 
 
