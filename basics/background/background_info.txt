@@ -1,0 +1,2 @@
+IBM invented SQL in 1974 under the name SEQUEL 
+It stood for Structured English Query Language
