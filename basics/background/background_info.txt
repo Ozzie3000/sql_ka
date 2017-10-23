@@ -1,2 +1,5 @@
 IBM invented SQL in 1974 under the name SEQUEL 
 It stood for Structured English Query Language
+Innitially developed by Donald Chamberlin and Raymond Boyce
+There was only one problem SEQUEL was already trademarked by a UK aircraft company
+So it condensed to SQL
