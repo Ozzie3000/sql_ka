@@ -23,3 +23,6 @@ INSERT INTO Books VALUES (12, "The Great Gatsby", "F. Scott Fitzgerald", "fictio
 INSERT INTO Books VALUES (13, "The Iliad", "Homer", "fiction", 704, 16);
 INSERT INTO Books VALUES (14, "One Hundred Years of Solitude", "Gabriel Garcia Marquez", "fiction", 417, 10);
 INSERT INTO Books VALUES (15, "Crime and Punishment", "Fyodor Dostoyevsky", "fiction", 430, 6);
+
+/** grab author, title, price and order by price lowest to highest **/
+SELECT author, title, price FROM Books ORDER BY price;
