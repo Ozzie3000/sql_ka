@@ -10,7 +10,7 @@ INSERT INTO Books VALUES (1, "John Steinbeck", "The Winter of our Discontent", "
 SELECT * FROM Books;
 **/
 INSERT INTO Books VALUES (2, "Ernest Hemingway", "For Whom the Bell Tolls", "fiction", 480, 11);
-INSERT INTO Books VALUES (3, "", "", "", 1, 1);
+INSERT INTO Books VALUES (3, "Don Quixote", "Miguel de Cervantes", "fiction", 114 , 12);
 INSERT INTO Books VALUES (4, "", "", "", 1, 1);
 INSERT INTO Books VALUES (5, "", "", "", 1, 1);
 INSERT INTO Books VALUES (6, "", "", "", 1, 1);
