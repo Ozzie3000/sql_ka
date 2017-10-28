@@ -24,3 +24,9 @@ SELECT * FROM Exercise_logs ORDER BY calories DESC;
 
 /**filter down to combine conditions**/
 /**rows were calories greater than 50 and minutes less than 30**/
+SELECT * FROM Exercise_logs WHERE calories > 50 AND minutes < 30;
+
+/**use OR to return many conditions**/
+SELECT * FROM Exercise_logs WHERE calories > 150 OR heart_rate > 150;
+
+/**remember order of operations if you want to use multiple operators**/
