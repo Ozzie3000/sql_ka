@@ -13,6 +13,7 @@ INSERT INTO Exercise_logs (type, minutes, heart_rate, calories) VALUES ("rowing"
 /**switching it up**/
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 130);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("swimming", 20, 100, 145);
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("mountain climbers", 15, 150);
 
 SELECT * FROM Exercise_logs;
 /**Notice id was auto incremented and we did not specify it when inserting values by ommitting it**/
@@ -20,3 +21,6 @@ SELECT * FROM Exercise_logs;
 /**lets fine out where most cals are burnt**/
 SELECT * FROM Exercise_logs ORDER BY calories DESC;
 /** highest cal count should be first row**/
+
+/**filter down to combine conditions**/
+/**rows were calories greater than 50 and minutes less than 30**/
