@@ -1,4 +1,4 @@
-CREATE TABLE Excercise_logs
+CREATE TABLE Exercise_logs
 	(id INTEGER PRIMARY KEY AUTOINCREMENT,
 		type, TEXT,
 		minutes INTEGER,
@@ -12,4 +12,6 @@ CREATE TABLE Excercise_logs
 INSERT INTO Exercise_logs (type, minutes, heart_rate, calories) VALUES ("rowing", 30, 135, 120);
 /**switching it up**/
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 130);
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("swimming", 20, 100, 145);
 
+SELECT * FROM Exercise_logs;
