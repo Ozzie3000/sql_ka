@@ -11,9 +11,9 @@ CREATE TABLE Exercise_logs
 /**then pass values**/
 INSERT INTO Exercise_logs (type, minutes, heart_rate, calories) VALUES ("rowing", 30, 135, 120);
 /**switching it up**/
-INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 130);
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 150);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("swimming", 20, 100, 145);
-INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("mountain climbers", 15, 150);
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("mountain climbers", 10, 150, 170);
 
 SELECT * FROM Exercise_logs;
 /**Notice id was auto incremented and we did not specify it when inserting values by ommitting it**/
