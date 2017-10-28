@@ -10,3 +10,6 @@ CREATE TABLE Excercise_logs
 /**specify columns first**/
 /**then pass values**/
 INSERT INTO Exercise_logs (type, minutes, heart_rate, calories) VALUES ("rowing", 30, 135, 120);
+/**switching it up**/
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 130);
+
