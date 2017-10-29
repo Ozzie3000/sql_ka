@@ -25,3 +25,18 @@ SELECT * FROM Exercise_logs WHERE type = "biking";
 
 /**find outdoor stuff**/
 SELECT * FROM Exercise_logs WHERE type = "biking" OR type = "rowing" OR type = "swimming";
+
+/**use IN operator **/
+SELECT * FROM Exercise_logs WHERE type IN ("biking", "rowing", "swimming");
+
+/**use IN operator to find indoor**/
+SELECT * FROM Exercise_logs WHERE type NOT IN ("biking", "rowing", "swimming");
+
+/**lets add another table to make things interesting with IN **/
+CREATE TABLE DR_orders
+    (id INTEGER PRIMARY KEY,
+    type TEXT,
+    reason TEXT);
+
+INSERT INTO DR_orders (type, reason) VALUES ("swimming", "Improves endurance and flexibility.");
+INSERT INTO DR_orders (type, reason) VALUES ("hiking", "Increases cardiovascular health.");
