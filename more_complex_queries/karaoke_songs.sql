@@ -23,3 +23,6 @@ INSERT INTO Songs (title, artist, mood, duration, released)
     VALUES ("song g", "artist g", "mood g", 180, 1980);
 INSERT INTO Songs (title, artist, mood, duration, released)
     VALUES ("song h", "artist h", " mood h", 190, 1990);
+
+/**let's see the song titles first**/
+SELECT title FROM Songs;
