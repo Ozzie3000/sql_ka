@@ -5,7 +5,7 @@ CREATE TABLE Songs (
 	artist TEXT,
 	mood TEXT,
 	duration INTEGER,
-	releast INTEGER);
+	released INTEGER);
 
 INSERT INTO Songs (title, artist, mood, duration, released)
     VALUES ("song a", "artist a", "mood a", 120, 1920);
