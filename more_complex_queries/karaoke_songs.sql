@@ -30,3 +30,7 @@ SELECT title FROM Songs;
 /**your buddy only wants to sing songs of a particular mood (c) or songs in 80's or 90's**/
 /**show those results use OR**/
 SELECT title FROM Songs WHERE mood LIKE "%mood c%" or released > 1979;
+
+/**running out of songs.**/
+/**find songs less than 170, mood contatins mood, released before 1960**/
+SELECT title FROM Songs WHERE duration < 170 AND mood LIKE "%mood%" AND released < 1960;
