@@ -26,3 +26,7 @@ INSERT INTO Songs (title, artist, mood, duration, released)
 
 /**let's see the song titles first**/
 SELECT title FROM Songs;
+
+/**your buddy only wants to sing songs of a particular mood (c) or songs in 80's or 90's**/
+/**show those results use OR**/
+SELECT title FROM Songs WHERE mood LIKE "%mood c%" or released > 1979;
