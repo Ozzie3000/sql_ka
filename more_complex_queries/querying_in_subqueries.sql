@@ -39,4 +39,26 @@ CREATE TABLE DR_orders
     reason TEXT);
 
 INSERT INTO DR_orders (type, reason) VALUES ("swimming", "Improves endurance and flexibility.");
-INSERT INTO DR_orders (type, reason) VALUES ("hiking", "Increases cardiovascular health.");
+INSERT INTO DR_orders (type, reason) VALUES ("biking", "Increases cardiovascular health.");
+
+/**I want to see logs that correspond to doc recommendations**/
+/**start by find what doc recommends first**/
+/**should be swimming and hiking**/
+SELECT type FROM DR_orders;
+
+/**explicitly search for those types**/
+SELECT * FROM Exercise_logs WHERE TYPE IN ("swimming", "biking");
+
+/**what if rows change; let's make it dynamic**/
+/**use IN operator directly on results of sql query**/
+/**query and subquery**/
+SELECT * FROM Exercise_logs WHERE type IN (
+	SELECT type FROM DR_orders);
+
+/**only favs select and reason is because cardiovascular**/
+SELECT * FROM Exercise_logs WHERE type IN (
+	SELECT type FROM DR_orders WHERE reason = "Increases cardiovascular health.");
+
+/**the above too rigid what if other words are used later in conjunction with cardiovascular**/
+SELECT * FROM Exercise_logs WHERE type IN (
+	SELECT type FROM DR_orders WHERE reason LIKE "%cardiovascular%");
