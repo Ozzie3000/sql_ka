@@ -36,3 +36,8 @@ INSERT INTO books (author, title, words)
 SELECT author, SUM(words) AS total_words FROM books
     GROUP BY author
     HAVING total_words > 999999;
+
+/**group by authors and show written 150k or more avg**/
+SELECT author, AVG(words) AS avg_words FROM books
+    GROUP BY author
+    HAVING avg_words >= 150000;
