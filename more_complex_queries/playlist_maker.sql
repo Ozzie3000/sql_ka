@@ -58,3 +58,11 @@ INSERT INTO Songs (artist, title)
     VALUES ("Guns N' Roses", "Welcome to the Jungle");
     
 
+/*find a song with "fall" in it*/
+SELECT artist, title FROM Songs WHERE title LIKE "%fall%";
+
+/*find pop artists in artist through songs table*/
+SELECT artist FROM songs WHERE artist IN (SELECT name FROM artists WHERE genre = "Pop");
+
+/*find songs in songs table where that person is in the artist table as genre = Pop*/
+SELECT title FROM songs WHERE artist IN (SELECT name FROM artists WHERE genre = "Pop");
