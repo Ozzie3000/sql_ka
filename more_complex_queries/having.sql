@@ -12,8 +12,8 @@ INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("biking"
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("mountain climbers", 10, 150, 170);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("mountain climbers", 5, 75, 165);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("mountain climbers", 6, 76, 165);
-INSERT INTO Exercise_logs (type, minutes, heart_rate, calories) VALUES ("rowing", 15, 67, 120);
-INSERT INTO Exercise_logs (type, minutes, heart_rate, calories) VALUES ("rowing", 30, 135, 120);
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("rowing", 15, 67, 120);
+INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("rowing", 30, 135, 120);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("swimming", 20, 100, 145);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("swimming", 10, 50, 145);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 150);
@@ -40,4 +40,20 @@ SELECT type, SUM (calories) AS total_cals_burnt FROM Exercise_logs  WHERE calori
 SELECT type, SUM(calories) AS total_cals_burnt_all FROM Exercise_logs
 GROUP BY type
 HAVING total_cals_burnt_all > 150;
+/**having applies condition to grouped values and not individual values in individual rows**/
 
+/** avg calories for all exercies where we burnt more than x avg. group by type**/
+SELECT type, AVG(calories) AS avg_cals FROM Exercise_logs
+	GROUP BY type
+	HAVING avg_cals > 70;
+
+/**find where we logs 2 or more enteries for each type**/
+SELECT type FROM Exercise_logs
+	GROUP BY type
+	HAVING COUNT(*) >=2;
+
+/**find where we logs 2 or more enteries for each type**/
+/**show count for each type**/
+SELECT type, COUNT(type) AS two_more FROM Exercise_logs
+	GROUP BY type
+	HAVING two_more > 1;
