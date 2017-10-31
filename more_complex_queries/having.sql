@@ -28,3 +28,16 @@ SELECT SUM (calories) FROM Exercise_logs;
 
 /** how many cals for each activity**/
 SELECT type, SUM (calories) FROM Exercise_logs GROUP BY type;
+
+/** how many cals for each activity and rename your column of sum**/
+SELECT type, SUM (calories) AS total_cals_burnt FROM Exercise_logs GROUP BY type;
+
+/**burnt more than 150 cals total for any particular exercise**/
+/**you may think WHERE but this filters a row at a time so i looks for one occurance of 150 instead of sum**/
+SELECT type, SUM (calories) AS total_cals_burnt FROM Exercise_logs  WHERE calories > 150 GROUP BY type;
+
+/**total cals burnt in each type group by type**/
+SELECT type, SUM(calories) AS total_cals_burnt_all FROM Exercise_logs
+GROUP BY type
+HAVING total_cals_burnt_all > 150;
+
