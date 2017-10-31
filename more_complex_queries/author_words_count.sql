@@ -31,3 +31,8 @@ INSERT INTO books (author, title, words)
     VALUES ("J.R.R. Tolkien", "Two Towers", 143436);
 INSERT INTO books (author, title, words)
     VALUES ("J.R.R. Tolkien", "Return of the King", 134462);
+
+/**group by authors, show word count, make new column for total words, show only 1Million or more**/
+SELECT author, SUM(words) AS total_words FROM books
+    GROUP BY author
+    HAVING total_words > 999999;
