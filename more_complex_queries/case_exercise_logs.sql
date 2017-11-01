@@ -19,3 +19,10 @@ INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("swimmin
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 60, 600, 150);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 30, 300, 150);
 INSERT INTO Exercise_logs (type, minutes, calories, heart_rate) VALUES ("treadmill", 45, 150, 150);
+
+/**what do we have?**/
+SELECT * FROM Exercise_logs;
+
+/** 220 - age; max heart rate or so they say**/
+/**did we go over?**/
+SELECT COUNT(*) FROM Exercise_logs WHERE heart_rate >= 220 - 20;
