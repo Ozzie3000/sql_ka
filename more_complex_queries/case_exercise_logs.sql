@@ -26,3 +26,8 @@ SELECT * FROM Exercise_logs;
 /** 220 - age; max heart rate or so they say**/
 /**did we go over?**/
 SELECT COUNT(*) FROM Exercise_logs WHERE heart_rate >= 220 - 20;
+
+/**target for aerobic around 55 to 85 percent of your max**/
+SELECT COUNT(*) FROM Exercise_logs WHERE
+	heart_rate >= ROUND(0.55 * (220 -20))
+	AND heart_rate <= ROUND(0.85 * (220-20));
