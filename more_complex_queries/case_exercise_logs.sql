@@ -28,16 +28,17 @@ SELECT * FROM Exercise_logs;
 SELECT COUNT(*) FROM Exercise_logs WHERE heart_rate >= 220 - 20;
 
 /**target for aerobic around 55 to 85 percent of your max**/
-SELECT COUNT(*) FROM Exercise_logs WHERE
+SELECT COUNT(id) FROM Exercise_logs WHERE
 	heart_rate >= ROUND(0.55 * (220 -20))
-	AND heart_rate <= ROUND(0.85 * (220-20));
+	AND heart_rate < ROUND(0.85 * (220-20));
 
 /**other zones summary would be helpful**/
-/**csse**/
+/**case**/
 SELECT type, heart_rate,
 	CASE 
 		WHEN heart_rate > 220-20 THEN "Above Max"
-		WHEN heart_rate > ROUND(0.85 * (220-20)) THEN "Above target"
-		WHEN heart_rate > ROUND(0.55 * (220-20)) THEN "Within target"
+		WHEN heart_rate >= ROUND(0.85 * (220-20)) THEN "Above target"
+		WHEN heart_rate >= ROUND(0.55 * (220-20)) THEN "Within target"
 		ELSE "below target"
- FROM Exercise_logs
+	END as "hr_zone"
+ FROM Exercise_logs;
