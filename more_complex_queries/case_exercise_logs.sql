@@ -42,3 +42,15 @@ SELECT type, heart_rate,
 		ELSE "below target"
 	END as "hr_zone"
  FROM Exercise_logs;
+
+
+/**case and GROUP BY**/
+SELECT COUNT (*),
+	CASE 
+		WHEN heart_rate > 220-20 THEN "Above Max"
+		WHEN heart_rate >= ROUND(0.85 * (220-20)) THEN "Above target"
+		WHEN heart_rate >= ROUND(0.55 * (220-20)) THEN "Within target"
+		ELSE "below target"
+	END as "hr_zone"
+ FROM Exercise_logs
+GROUP BY hr_zone;
