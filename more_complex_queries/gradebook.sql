@@ -17,3 +17,6 @@ INSERT INTO student_grades (name, number_grade, fraction_completed)
     VALUES ("Tyrell", 76, 0.5013);
 INSERT INTO student_grades (name, number_grade, fraction_completed)
     VALUES ("Tully", 82, 0.9045);
+
+/**  select all of the rows, and display the name, number_grade, and percent_completed, which you can compute by multiplying and rounding the fraction_completed column.  (by 100 to get percent)**/    
+SELECT name, number_grade, ROUND(fraction_completed * 100) AS percent_completed FROM student_grades;
