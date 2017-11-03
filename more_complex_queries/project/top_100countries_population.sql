@@ -324,3 +324,11 @@ INSERT INTO countries_by_population (country, population, percent_one_year_chang
     "Papua New Guinea", 7476108, 2.12, 154846, 0, 21.0, 5, 3.86, 462831, 16, 13, 950364, 0.10
 );
 
+/*what is avg median_age all countries*/
+SELECT AVG(median_age) FROM countries_by_population;
+
+/*what is max median_age all countries*/
+SELECT country, MAX(median_age) FROM countries_by_population;
+
+/*what is max median_age all countries*/
+SELECT country, MIN(median_age) FROM countries_by_population;
