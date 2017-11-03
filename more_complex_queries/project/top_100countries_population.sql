@@ -332,3 +332,9 @@ SELECT country, MAX(median_age) FROM countries_by_population;
 
 /*what is max median_age all countries*/
 SELECT country, MIN(median_age) FROM countries_by_population;
+
+/*What about those numbers per category in the data (using HAVING)?*/
+SELECT rank, country, population, percent_aged_over_60 FROM countries_by_population
+    GROUP BY population
+    HAVING percent_aged_over_60 > 20
+    ORDER BY percent_aged_over_60 DESC;
