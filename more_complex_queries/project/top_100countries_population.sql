@@ -339,3 +339,16 @@ SELECT rank, country, population, percent_aged_over_60 FROM countries_by_populat
     GROUP BY rank
     HAVING percent_aged_over_60 > 25
     ORDER BY percent_aged_over_60 DESC;
+
+/** ways are there to group the data values that don’t exist yet (using CASE)?**/
+SELECT COUNT(*),
+    CASE
+        WHEN net_migrants > 1000000 THEN "A) I'm kind of popular. 1M+"
+        WHEN net_migrants > 2 THEN "B) Some people found me. 2+"
+        WHEN net_migrants = 0 THEN "C) All by myself."
+        WHEN net_migrants > -400001 THEN "D) Where is everyone going? 400k leaving or less"
+        ELSE "E) Do I smell?" 
+    END as "in_outs"
+FROM countries_by_population
+GROUP BY in_outs
+ORDER BY in_outs;
