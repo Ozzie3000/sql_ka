@@ -357,3 +357,6 @@ ORDER BY in_outs;
 /**ways are there to filter the data (using AND/OR)**/
 SELECT rank, country, median_age, percent_aged_over_60 FROM countries_by_population 
     WHERE median_age > 35 AND percent_aged_over_60 > 25;
+
+/*USA stats*/
+SELECT rank, country, median_age, percent_aged_over_60 FROM countries_by_population WHERE country LIKE "%U.S.A.%";
