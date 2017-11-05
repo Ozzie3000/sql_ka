@@ -55,3 +55,15 @@ SELECT * FROM students
 SELECT first_name, last_name, email, test, grade FROM students
 	JOIN student_grades
 	ON students.id1 = student_grades.student_id;
+
+/*filter to just grades greater than x*/
+SELECT first_name, email, test, grade FROM students
+	JOIN student_grades
+	ON students.id1 = student_grades.student_id
+	WHERE grade > 90;
+
+/*to write good code be explicit about what table the field is coming from*/
+SELECT students.first_name, students.email, student_grades.test, student_grades.grade FROM students
+	JOIN student_grades
+	ON students.id1 = student_grades.student_id
+	WHERE grade > 90;
