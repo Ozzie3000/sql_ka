@@ -50,3 +50,8 @@ SELECT * FROM table1
 SELECT * FROM students
 	JOIN student_grades
 	ON students.id1 = student_grades.student_id;
+
+	/*run explicit inner join again, but with fewer columns*/
+SELECT first_name, last_name, email, test, grade FROM students
+	JOIN student_grades
+	ON students.id1 = student_grades.student_id;
