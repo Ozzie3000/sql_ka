@@ -36,3 +36,7 @@ grabs the first row and its four columns from the first table "student_grade"
 and joins to the right the first row from the 2nd table "students" with its five columns.
 Then is grabs first row again from student_grades table 
 and joins to the right the second row from the 2nd table "students" with its five columns.*/
+
+/*inner join*/
+SELECT * FROM student_grades, students
+	WHERE student_grades.student_id = students.id1;
