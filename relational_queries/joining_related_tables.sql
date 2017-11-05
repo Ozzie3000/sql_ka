@@ -37,6 +37,16 @@ and joins to the right the first row from the 2nd table "students" with its five
 Then is grabs first row again from student_grades table 
 and joins to the right the second row from the 2nd table "students" with its five columns.*/
 
-/*inner join*/
+/*inner join.  implicit*/
 SELECT * FROM student_grades, students
 	WHERE student_grades.student_id = students.id1;
+
+/*lets be specific.  Explicit inner join*/
+/*
+SELECT * FROM table1
+	JOIN table2
+	ON table1.t1field = table2.t2field;  /*here t2field is a foreign key
+	*/
+SELECT * FROM students
+	JOIN student_grades
+	ON students.id1 = student_grades.student_id;
