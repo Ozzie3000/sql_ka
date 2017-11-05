@@ -14,3 +14,12 @@ CREATE TABLE student_grades (id INTEGER PRIMARY KEY,
     student_id INTEGER,
     test TEXT,
     grade INTEGER);
+
+INSERT INTO student_grades (student_id, test, grade)
+    VALUES (1, "Nutrition", 92);
+INSERT INTO student_grades (student_id, test, grade)
+    VALUES (2, "Nutrition", 95);
+INSERT INTO student_grades (student_id, test, grade)
+    VALUES (1, "Chemistry", 95);
+INSERT INTO student_grades (student_id, test, grade)
+    VALUES (2, "Chemistry", 85);
