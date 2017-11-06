@@ -29,7 +29,12 @@ INSERT INTO Hobbies (person_id, name) VALUES (6, "not sinking");
 
 
 /*insert a person*/
-INSERT INTO Persons (name, age) VALUES ("John Fogerty");
+INSERT INTO Persons (name, age) VALUES ("John Fogerty", 45);
 
 /*insert a hobby*/
 INSERT INTO Hobbies (person_id, name) VALUES (7, "Rocking out");
+
+/* select the 2 tables with a join so that you can see each person's name next to their hobby*/
+SELECT Persons.name, Hobbies.name FROM Persons
+	JOIN Hobbies
+	ON Persons.id = Hobbies.person_id;
