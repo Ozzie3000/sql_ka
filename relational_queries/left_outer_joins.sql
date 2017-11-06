@@ -41,4 +41,12 @@ SELECT Students.first_name, Students.last_name, Student_projects.title FROM Stud
 /**only creates rows in putput if there are matching rows in both joined tables*/
 /*richard is in Students, but not in Student_projects*/
 /*This makes sense most of the time, but now I want all students even slackers to show up*/
+/*outer join*/
 
+/*left outer join*/
+SELECT Students.first_name, Students.last_name, Student_projects.title FROM Students
+    LEFT OUTER JOIN Student_projects
+    ON Students.id1 = Student_projects.student_id;
+/*tell sql to retain all rows from left table which is after FROM .. the Students table*/
+/*  FROM Stundents LEFT OUTER JOIN Stundent_projects*/
+/*so you see Students is on the left of the join */
