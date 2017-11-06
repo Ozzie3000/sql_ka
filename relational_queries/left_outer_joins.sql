@@ -49,4 +49,9 @@ SELECT Students.first_name, Students.last_name, Student_projects.title FROM Stud
     ON Students.id1 = Student_projects.student_id;
 /*tell sql to retain all rows from left table which is after FROM .. the Students table*/
 /*  FROM Stundents LEFT OUTER JOIN Stundent_projects*/
-/*so you see Students is on the left of the join */
+/*so you see Students is on the left of the join  and OUTER tells it to retain even if no match on right (Stundent_projects*/
+
+/*right outer join; looks the same but flips it.  Not support interactive environment I am using*/
+SELECT Students.first_name, Students.last_name, Student_projects.title FROM Students
+    RIGHT OUTER JOIN Student_projects
+    ON Students.id1 = Student_projects.student_id;
