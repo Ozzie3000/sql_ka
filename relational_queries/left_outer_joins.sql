@@ -55,3 +55,8 @@ SELECT Students.first_name, Students.last_name, Student_projects.title FROM Stud
 SELECT Students.first_name, Students.last_name, Student_projects.title FROM Students
     RIGHT OUTER JOIN Student_projects
     ON Students.id1 = Student_projects.student_id;
+
+/*FUll outer join keeps rows from both sides and display NULL where empty. Also not supported here*/
+SELECT Students.first_name, Students.last_name, Student_projects.title FROM Students
+    FULL OUTER JOIN Student_projects
+    ON Students.id1 = Student_projects.student_id;
