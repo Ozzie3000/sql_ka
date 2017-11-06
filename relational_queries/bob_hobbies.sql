@@ -35,6 +35,12 @@ INSERT INTO Persons (name, age) VALUES ("John Fogerty", 45);
 INSERT INTO Hobbies (person_id, name) VALUES (7, "Rocking out");
 
 /* select the 2 tables with a join so that you can see each person's name next to their hobby*/
-SELECT Persons.name, Hobbies.name FROM Persons
+SELECT Persons.name, Hobbies.name AS hobby FROM Persons
 	JOIN Hobbies
 	ON Persons.id = Hobbies.person_id;
+
+	/* add an additional query that shows only the name and hobbies of 'John Fogerty', using JOIN combined with WHERE*/
+SELECT Persons.name, Hobbies.name FROM Persons
+    JOIN Hobbies
+    ON Persons.id = Hobbies.person_id
+    WHERE Persons.name = "John Fogerty";
