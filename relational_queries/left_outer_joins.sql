@@ -38,3 +38,5 @@ SELECT Students.first_name, Students.last_name, Student_projects.title FROM Stud
     JOIN Student_projects
     ON Students.id1 = Student_projects.student_id;
 /*notice Richard is missing*/
+/**only creates rows in putput if there are matching rows in both joined tables*/
+/*richard is in Students, but not in Student_projects*/
