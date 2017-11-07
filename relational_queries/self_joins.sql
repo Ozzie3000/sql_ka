@@ -26,7 +26,7 @@ SELECT Students.id, Students.first_name, Students.last_name, Students.buddy_id
 and we should rename as alias to distinguish*/
 
 /*also need an ON to match foreign key from students to Primary key on buddies table*/
-SELECT Students.id, Students.first_name, Students.last_name, Buddies.email 
+SELECT Students.id, Students.first_name, Students.last_name, Buddies.email AS buddy_email
     FROM Students
     JOIN Students Buddies
     ON Students.buddy_id = Buddies.id;
