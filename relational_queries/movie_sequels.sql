@@ -19,3 +19,17 @@ INSERT INTO movies
     VALUES (7, "Harry Potter and the Deathly Hallows – Part 1", 2010, 8);
 INSERT INTO movies 
     VALUES (8, "Harry Potter and the Deathly Hallows – Part 2", 2011, NULL);
+
+/*issue a SELECT that will show the title of each movie next to its sequel's title (or NULL if it doesn't have a sequel*/
+
+/*
+SELECT table1.title table2.title 
+    FROM Table1
+    JOIN Table1 Table2
+    ON Table1.sequel_id = Table2.id
+ */
+ 
+SELECT movies.title, partdeux.title AS sequel_title
+    FROM movies
+    LEFT OUTER JOIN movies partdeux
+    ON movies.sequel_id = partdeux.id;
