@@ -3,11 +3,11 @@ CREATE TABLE Persons (
     fullname TEXT,
     age INTEGER);
     
-INSERT INTO Persons (fullname, age) VALUES ("Bobby McBobbyFace", "12");
-INSERT INTO Persons (fullname, age) VALUES ("Lucy BoBucie", "25");
-INSERT INTO Persons (fullname, age) VALUES ("Banana FoFanna", "14");
-INSERT INTO Persons (fullname, age) VALUES ("Shish Kabob", "20");
-INSERT INTO Persons (fullname, age) VALUES ("Fluffy Sparkles", "8");
+INSERT INTO Persons (fullname, age) VALUES ("Bobby McBobbyFace", 12);
+INSERT INTO Persons (fullname, age) VALUES ("Lucy BoBucie", 25);
+INSERT INTO Persons (fullname, age) VALUES ("Banana FoFanna", 14);
+INSERT INTO Persons (fullname, age) VALUES ("Shish Kabob", 20);
+INSERT INTO Persons (fullname, age) VALUES ("Fluffy Sparkles", 8);
 
 CREATE table Hobbies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -35,3 +35,8 @@ INSERT INTO Friends (person1_id, person2_id)
 INSERT INTO Friends (person1_id, person2_id)
     VALUES (2, 3);
     
+/*use a JOIN to display a table showing people's names with their hobbies.*/
+SELECT Persons.fullname, Hobbies.name 
+    FROM Persons
+    JOIN Hobbies
+    ON Persons.id = Hobbies.person_id;
