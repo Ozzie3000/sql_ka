@@ -40,3 +40,17 @@ SELECT Persons.fullname, Hobbies.name
     FROM Persons
     JOIN Hobbies
     ON Persons.id = Hobbies.person_id;
+
+/*use a JOIN to display a table showing people's names with their hobbies. Include all people*/
+SELECT Persons.fullname, Hobbies.name 
+    FROM Persons
+    LEFT OUTER JOIN Hobbies
+    ON Persons.id = Hobbies.person_id;
+
+/*SELECT with a JOIN to show the names of each pair of friends, based on the data in the friends table*/
+SELECT Persons.fullname, Persons2.fullname AS friend
+    FROM Persons
+    JOIN Friends
+    ON Persons.id = Friends.person1_id
+    JOIN Persons Persons2
+    ON Persons2.id = Friends.person2_id;
