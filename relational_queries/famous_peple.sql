@@ -16,3 +16,9 @@ INSERT INTO Famous_peeps (firstname, lastname) VALUES ("gloria", "mclean");
 INSERT INTO Famous_peeps (firstname, lastname) VALUES ("humphrey", "bogart");
 INSERT INTO Famous_peeps (firstname, lastname) VALUES ("helen", "menken");
 INSERT INTO Famous_peeps (firstname, lastname) VALUES ("cary", "grant");
+
+CREATE TABLE Movies (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	movie_name TEXT);
+
+INSERT INTO Movies (movie_name) VALUES ("rebel without a cause");
