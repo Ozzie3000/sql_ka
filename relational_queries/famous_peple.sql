@@ -19,6 +19,13 @@ INSERT INTO Famous_peeps (firstname, lastname) VALUES ("cary", "grant");
 
 CREATE TABLE Movies (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	Famous_peeps_id INTEGER,
 	movie_name TEXT);
 
-INSERT INTO Movies (movie_name) VALUES ("rebel without a cause");
+INSERT INTO Movies (movie_name) VALUES (1, "rebel without a cause");
+INSERT INTO Movies (movie_name) VALUES (2, "jet pilot");
+INSERT INTO Movies (movie_name) VALUES (3, "the alamo");
+INSERT INTO Movies (movie_name) VALUES (4, "the wizard of oz");
+INSERT INTO Movies (movie_name) VALUES (6, "shop worm angel");
+INSERT INTO Movies (movie_name) VALUES (8, "the maltese falcon");
+INSERT INTO Movies (movie_name) VALUES (10, "none but the lonely heart");
