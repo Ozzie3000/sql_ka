@@ -35,3 +35,11 @@ INSERT INTO Project_pairs (project1_id, project2_id)
     VALUES(1, 2);
 INSERT INTO Project_pairs (project1_id, project2_id)
     VALUES(3, 4);
+
+/*take a peak at project pairs*/
+SELECT * FROM Project_pairs;
+
+/*join project_pairs and student projects to see titles*/
+SELECT * 
+    FROM Project_pairs
+    JOIN Student_projects;
