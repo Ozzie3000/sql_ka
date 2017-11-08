@@ -43,3 +43,11 @@ SELECT * FROM Project_pairs;
 SELECT * 
     FROM Project_pairs
     JOIN Student_projects;
+
+/*now we need another join student_projects to itself to get 2 projects on one line*/
+SELECT * 
+    FROM Project_pairs
+    JOIN Student_projects stp1
+    ON Project_pairs.project1_id = stp1.id
+    JOIN Student_projects stp2
+    ON Project_pairs.project2_id = stp2.id;
