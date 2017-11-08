@@ -5,3 +5,14 @@ CREATE TABLE Famous_peeps(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	firstname TEXT,
 	lastname TEXT);
+
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("james", "dean");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("john", "wayne");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("pilar", "pallete");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("judy", "garland");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("david", "rose");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("james", "stewart");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("gloria", "mclean");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("humphrey", "bogart");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("helen", "menken");
+INSERT INTO Famous_peeps (firstname, lastname) VALUES ("cary", "grant");
