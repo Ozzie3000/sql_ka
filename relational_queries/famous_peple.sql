@@ -35,12 +35,17 @@ CREATE TABLE Married (
 	personid1 INTEGER,
 	personid2 INTEGER);
 
+INSERT INTO Married (personid1, personid2) VALUES (2, 3);
+INSERT INTO Married (personid1, personid2) VALUES (4, 5);
+INSERT INTO Married (personid1, personid2) VALUES (6, 7);
+INSERT INTO Married (personid1, personid2) VALUES (8, 9);
+
 /*Movie stars: What movies are they in?*/
 SELECT * FROM Famous_peeps
 	JOIN Movies
 	ON Famous_peeps.id = Movies.Famous_peeps_id;
 
-/* just person and movie columns*/*/
+/* just person and movie columns*/
 SELECT Famous_peeps.firstname, Famous_peeps.lastname, Movies.movie_name FROM Famous_peeps
 	JOIN Movies
 	ON Famous_peeps.id = Movies.Famous_peeps_id;
