@@ -49,3 +49,11 @@ SELECT * FROM Famous_peeps
 SELECT Famous_peeps.firstname, Famous_peeps.lastname, Movies.movie_name FROM Famous_peeps
 	JOIN Movies
 	ON Famous_peeps.id = Movies.Famous_peeps_id;
+
+/*Are they married to each other? Show nulls*/
+SELECT Fp1.firstname, Fp1.lastname, Fp2.firstname AS spouse_firstname, Fp2.lastname AS spouse_lastname
+	FROM Famous_peeps Fp1
+	LEFT OUTER JOIN Married
+	ON Fp1.id = Married.personid1
+	LEFT OUTER JOIN Famous_peeps Fp2
+	ON Fp2.id = Married.personid2;
