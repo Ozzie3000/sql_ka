@@ -28,3 +28,7 @@ SELECT * FROM Diary_logs;
 UPDATE Diary_logs SET content = "OhNoesGuy taught me how to make a mean sundae with lots of chocolate. His girlfriend was kind enough to let ups borrow the supplies"
 	WHERE user_id = 1 AND date = "2013-12-11"/
 */
+
+/*maybe you happen to know row id; which is ideal compare to above as that user had 2 entries for that date*/
+UPDATE Diary_logs SET content = "OhNoesGuy taught me how to make a mean sundae with lots of chocolate. His girlfriend was kind enough to let ups borrow the supplies."
+	WHERE id = 2;
