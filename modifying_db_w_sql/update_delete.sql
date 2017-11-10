@@ -41,3 +41,7 @@ DELETE content FROM Diary_logs WHERE id = 2;
 
 /*check out logs after UPDATE command*/    
 SELECT * FROM Diary_logs;
+
+/*some apps don't actually delete data. May have extra column isDeleted and when you go to delete value in that row to true.
+Then in your queries filters get added to search isDeleted NOT true
+*/
