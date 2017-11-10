@@ -19,3 +19,6 @@ INSERT INTO diary_logs (user_id, date, content) VALUES (1, "2013-12-11",
 
 INSERT INTO diary_logs (user_id, date, content) VALUES (1, "2013-12-12",
     "OhNoesGuy and I went out for some drinks with the crew.  Then we all went to watch a Warriors game.");
+
+/*check out logs so far*/    
+SELECT * FROM Diary_logs; 
