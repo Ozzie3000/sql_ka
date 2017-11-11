@@ -37,7 +37,7 @@ UPDATE Diary_logs SET content = "OhNoesGuy taught me how to make a mean sundae w
 SELECT * FROM Diary_logs; 
 
 /*user wants to delete a log entry. Ohnoesguy gf's didn't know he went to a BB game*/
-DELETE content FROM Diary_logs WHERE id = 2;
+DELETE FROM Diary_logs WHERE id = 2;
 
 /*check out logs after UPDATE command*/    
 SELECT * FROM Diary_logs;
@@ -45,3 +45,7 @@ SELECT * FROM Diary_logs;
 /*some apps don't actually delete data. May have extra column isDeleted and when you go to delete value in that row to true.
 Then in your queries filters get added to search isDeleted NOT true
 */
+
+DELETE FROM Documents WHERE title = "Jet Supplies";
+
+SELECT * FROM Documents;
