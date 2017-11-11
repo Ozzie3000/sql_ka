@@ -46,6 +46,8 @@ SELECT * FROM Diary_logs;
 Then in your queries filters get added to search isDeleted NOT true
 */
 
+/*delete row where title is Jet supplies */
 DELETE FROM Documents WHERE title = "Jet Supplies";
 
+/*check to see if it worked*/
 SELECT * FROM Documents;
