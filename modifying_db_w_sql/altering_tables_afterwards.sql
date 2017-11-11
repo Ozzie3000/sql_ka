@@ -14,3 +14,9 @@ CREATE TABLE diary_logs (
 /* After user submits a diary log */
 INSERT INTO diary_logs (user_id, date, content) VALUES (1, "2010-11-12",
     "I ate so much ice cream I passed out");
+
+/*create statement was ran months ago. Data gets wipped out if you re-run it. 
+So what do we do if we want to update the rows?  Alter
+ALTER TABLE tablename ADD columnname TYPE;
+*/
+
