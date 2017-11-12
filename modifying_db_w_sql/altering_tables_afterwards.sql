@@ -26,3 +26,7 @@ SELECT * FROM diary_logs;
 
 /*set default values you could have ran it like this instead*/
 /* ALTER TABLE diary_logs ADD emotion TEXT default "unknown";
+
+/*How to delete entire table*/
+DROP TABLE diary_logs;
+SELECT * FROM diary_logs;
