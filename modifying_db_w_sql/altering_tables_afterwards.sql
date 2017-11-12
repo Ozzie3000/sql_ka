@@ -20,3 +20,5 @@ So what do we do if we want to update the rows?  Alter
 ALTER TABLE tablename ADD columnname TYPE;
 */
 
+INSERT INTO diary_logs (user_id, date, content, emotion) VALUES (1, "2011-12-13", "I got to see an Orca today", "Excited");
+SELECT * FROM diary_logs;
