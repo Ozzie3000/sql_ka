@@ -12,10 +12,13 @@ INSERT INTO tekken_scores (username, score, date) VALUES ("DUSTIN", 650990, "198
 INSERT INTO tekken_scores (username, score, date) VALUES ("LUCAS", 641183, "1983-12-29");
 INSERT INTO tekken_scores (username, score, date) VALUES ("WIZARD", 620784, "1984-02-17");
 INSERT INTO tekken_scores (username, score, date) VALUES ("HBIATC", 552415, "1984-09-07");
+INSERT INTO tekken_scores (username, score, date) VALUES ("DUPE", 552415, "1984-09-07");
 
 /*UPDATE to emulate what happens when you edit data in the app.*/
 UPDATE tekken_scores SET username = "PRESTON", score = 555942, date = "1984-09-27" WHERE id = 5;
 
+/*DELETE to emulate what happens when you delete data in the app.*/
+DELETE FROM tekken_scores WHERE id = 6;
 
 /*checker*/
 SELECT * FROM tekken_scores;
